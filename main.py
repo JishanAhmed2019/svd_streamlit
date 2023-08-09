@@ -4,10 +4,10 @@ from matplotlib.image import imread
 import matplotlib.pyplot as plt
 
 # Load image
-image_path = "./sample_image.jpg"
+image_path = "./goat.jpg"
 image = imread(image_path)
-width = image.shape[0]//500
-height = image.shape[0]//500
+width = image.shape[0]//20
+height = image.shape[0]//20
 gray_image = image[:, :, 2]
 
 # Set page title and wide layout
