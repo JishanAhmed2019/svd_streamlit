@@ -4,7 +4,7 @@ from matplotlib.image import imread
 import matplotlib.pyplot as plt
 
 # Load image
-image_path = "sample_image.jpg"
+image_path = "./sample_image.jpg"
 image = imread(image_path)
 width = image.shape[0]//500
 height = image.shape[0]//500
