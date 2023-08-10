@@ -3,7 +3,9 @@ import numpy as np
 from matplotlib.image import imread
 import matplotlib.pyplot as plt
 from sidebar_utils import common_markdown
-st.set_page_config(layout="wide")
+st.set_page_config(layout="wide", 
+                   page_title= 'SVD - Singular Value Decomposition', 
+                   page_icon= './static/icons8-matrix-16.png')
 
 hide_streamlit_style = """
             <style>
@@ -14,7 +16,7 @@ hide_streamlit_style = """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # Load image
-image_path = "./goat.jpg"
+image_path = "./static/goat.jpg"
 image = imread(image_path)
 width = image.shape[0]//20
 height = image.shape[0]//20
