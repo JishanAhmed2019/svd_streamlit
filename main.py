@@ -1,15 +1,17 @@
 import streamlit as st
-# from streamlit_lottie import st_lottie_spinner
-# import json
 import numpy as np
 from matplotlib.image import imread
 import matplotlib.pyplot as plt
 from sidebar_utils import common_markdown
+st.set_page_config(layout="wide")
 
-# def render_algebra_animation():
-#     with open('./algebra_animation.json', 'rb') as f:
-#         animation_json = json.load(f)
-#     return st_lottie_spinner(animation_json, height = 250)
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # Load image
 image_path = "./goat.jpg"
@@ -19,7 +21,6 @@ height = image.shape[0]//20
 gray_image = image[:, :, 2]
 
 # Set page title and wide layout
-st.set_page_config(layout="wide")
 st.title("SVD ( Singular Value Decomposition )", anchor="center")
 st.write("""
 An interactive demonstration of Singular Value Decomposition (SVD) applied to image reconstruction.
